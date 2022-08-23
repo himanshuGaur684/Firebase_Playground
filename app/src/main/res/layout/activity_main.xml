@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Firebase \nAuthentication"
+            android:layout_marginTop="64dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:maxLines="1"
+            android:hint="@string/email"
+            app:layout_constraintEnd_toStartOf="@+id/guideLineR"
+            app:layout_constraintStart_toStartOf="@+id/guideLineL"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edPassword"
+            android:maxLines="1"
+            android:layout_width="0dp"
+            android:layout_marginTop="20dp"
+            android:hint="@string/password"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toStartOf="@+id/guideLineR"
+            app:layout_constraintStart_toStartOf="@+id/guideLineL"
+            app:layout_constraintTop_toBottomOf="@+id/edEmail" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSignUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideLineR"
+            app:layout_constraintStart_toStartOf="@+id/guideLineL"
+            app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUserLogout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/logout"
+            app:layout_constraintEnd_toStartOf="@+id/guideLineR"
+            app:layout_constraintStart_toStartOf="@+id/guideLineL"
+            app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSignIn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/login"
+            app:layout_constraintEnd_toStartOf="@+id/guideLineR"
+            app:layout_constraintStart_toStartOf="@+id/guideLineL"
+            app:layout_constraintTop_toBottomOf="@+id/edPassword" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/guideLineL"
+            app:layout_constraintGuide_begin="16dp"
+            />
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/guideLineR"
+            app:layout_constraintGuide_end="16dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
