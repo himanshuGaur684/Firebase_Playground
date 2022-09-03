@@ -1,57 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
         tools:context=".MainActivity">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/appCompatTextView"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/edTitle"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Firebase\nStorage"
-            android:textColor="@color/black"
-            android:textSize="36sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:hint="Title" />
+
+        <EditText
+            android:id="@+id/edDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Description" />
 
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnUploadFilesOnFirebase"
-            android:layout_width="0dp"
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
-            android:text="Firebase Storage Upload"
-            app:layout_constraintEnd_toStartOf="@+id/guideLineR"
-            app:layout_constraintStart_toStartOf="@+id/guideLineL"
-            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
+            android:layout_marginTop="12dp"
+            android:text="Save" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Read" />
 
-        <androidx.constraintlayout.widget.Guideline
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Update" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Delete" />
+        <TextView
+            android:id="@+id/tvRead"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:id="@+id/guideLineL"
-            app:layout_constraintGuide_begin="16dp"
-            />
-        <androidx.constraintlayout.widget.Guideline
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:id="@+id/guideLineR"
-            app:layout_constraintGuide_end="16dp"
-            />
+            android:textSize="24sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>
